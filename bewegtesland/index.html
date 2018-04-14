@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Rachel Smith</title>
+	<link href="../main.css" rel="stylesheet"/>
+
+</head>
+<body>
+
+ <div id="white-box"></div>
+
+
+	<a href="../index.html"><canvas id="mainTitle" width="454" height="50"><img id="Cut_Out_Title" src="../Cut_Out_Title.png"></canvas></a>
+
+<div id ="container3" onmousemove="mainTitle(454,50), colourChanger()">
+
+
+<iframe id = "video1"  width="640" height="360" src="https://player.vimeo.com/video/233204835?&amp;loop=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+
+<iframe id = "video2" width="640" height="360" src="https://www.youtube.com/embed/kr6hlMubGJU?rel=0&amp;controls=0" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe>
+
+
+<div id="textbox" onmousemove="mainTitle(454,50), colourChanger()">
+<p>'Jalousie in Camburg' (as part of)<br/>'Bewegtes Land / Scenery for a passing train'<br/>August 2017<br/>Saaletal, Thüringen</p>
+</div>
+
+<script src = "../sketch.js"></script>
+
+<!call the function(s) in a seperate script tag>
+
+<script>
+var titlewidth = document.getElementById("mainTitle").width;
+var titleheight = document.getElementById("mainTitle").height;
+window.onload = mainTitle(parseInt(titlewidth,10), parseInt(titleheight, 10));
+</script>
+
+</div>
+
+<div id="footer">
+  <a href="../contact/index.html"><p id="footText">Contact</p></a>
+</div>
+
+
+
+</body>
+</html>

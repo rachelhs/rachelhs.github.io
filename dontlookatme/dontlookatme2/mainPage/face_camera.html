@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>DON'T LOOK AT ME</title>
+
+  <link href="../../../main.css" rel="stylesheet"/>
+
+  <script src="../build/tracking-min.js"></script>
+  <script src="../build/data/face-min.js"></script>
+  <script src = "../../../sketch.js"></script>
+
+
+  <style>
+  video, video5, canvas {
+    
+    position:fixed;
+    top: 100px;
+  }
+
+  #textbox3 {
+    position: fixed;
+    width: 20%;
+    text-align: center;
+    font-size: 12px;
+    font-family: helvetica;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #00FF00;
+}
+  </style>
+
+</head>
+<body>
+
+   <div id="white-box"></div>
+
+   <a href="../../../index.html"><canvas id="mainTitle" width="454" height="50"><img id="Cut_Out_Title" src="../../../Cut_Out_Title.png"></canvas></a>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+    <div class="container2" onmousemove="mainTitle(454,50), colourChanger()">
+<div id="textbox3" onmousemove="mainTitle(454,50), colourChanger()">
+<p>turn your webcam on</p>
+</div>
+
+      <video id="video" width="320" height="240" preload autoplay loop muted></video>
+        <canvas id="canvas" width="640" height="480"></canvas>
+      <video id = "video5" type="video/mov" src="../video/party_horn_new.mov" height="480" width="640" ></video>
+    </div>
+
+
+    <script>
+var titlewidth = document.getElementById("mainTitle").width;
+var titleheight = document.getElementById("mainTitle").height;
+window.onload = mainTitle(parseInt(titlewidth,10), parseInt(titleheight, 10));
+</script>
+
+
+
+  <script>
+
+    window.onload = function() {
+      var video = document.getElementById('video');
+      var video5 = document.getElementById('video5');
+      var canvas = document.getElementById('canvas');
+      var context = canvas.getContext('2d');
+     var tracker = new tracking.ObjectTracker('face');
+
+     //white rectangle covers camera 320, 240
+     //these settings seem to make the tracker work well...
+      tracker.setInitialScale(4);
+      tracker.setStepSize(2);
+      tracker.setEdgesDensity(0.1);
+
+      tracking.track('#video', tracker, { camera: true });
+
+      context.beginPath();
+      context.fillStyle = "white";
+      context.rect(0, 40, 640, 480);
+      context.fill();      
+      
+      tracker.on('track', function(event) {
+
+        //if face detected then...
+        event.data.forEach(function(rect) {
+        console.log("FACE CAN SEE");
+        video5.autoplay = true;
+        video5.load();
+
+
+        });
+      });
+
+     
+    };
+
+     function colourChanger(){
+
+  var c = document.getElementById("footer");
+  var e = document.getElementById("textbox3");
+  var colours = ["red", "lime", "blue", "yellow", "fuchsia", "cyan"];
+  var randCol = Math.floor(Math.random()*6);
+  c.style.borderTopColor = colours[randCol];
+  e.style.borderBottomColor = colours[randCol];
+ }
+  </script>
+
+  </div>
+
+<div id="footer">
+  <a href="../../../contact/index.html"><p id="footText">Contact</p></a>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Rachel Smith</title>
+	<link href="../main.css" rel="stylesheet"/>
+
+</head>
+<body>
+
+ <div id="white-box"></div>
+
+
+	<a href="../index.html"><canvas id="mainTitle" width="454" height="50"><img id="Cut_Out_Title" src="../Cut_Out_Title.png"></canvas></a>
+
+<div id ="container8" onmousemove="mainTitle(454,50), colourChanger()">
+
+<div id="textbox" onmousemove="mainTitle(454,50), colourChanger()">
+<p>A collection of Twitter Bots<br/>May 2017 - present<br/><br/>@rachelsmith400 uses machine learning with data from other twitter users with the handle @rachelsmith<br/><br/>'art of the day', 'artist of the day', 'good art of the day' and 'person of the day' tweet the first image that appears on Google image search for their term each day</p>
+</div>
+
+<a href="https://twitter.com/rachelsmith400"><img class="images" src="images/image1.png"><br/></a>
+<a href="https://twitter.com/artof_the_day"><img class="images" src="images/image2.png"><br/></a>
+<a href="https://twitter.com/artist_of_day"><img class="images" src="images/image3.png"><br/></a>
+<a href="https://twitter.com/goodartoftheday"><img class="images" src="images/image4.png"><br/></a>
+<a href="https://twitter.com/personof_theday"><img class="images" src="images/image5.png"><br/></a>
+
+
+<script src = "../sketch.js"></script>
+
+<!call the function(s) in a seperate script tag>
+
+<script>
+var titlewidth = document.getElementById("mainTitle").width;
+var titleheight = document.getElementById("mainTitle").height;
+window.onload = mainTitle(parseInt(titlewidth,10), parseInt(titleheight, 10));
+</script>
+
+</div>
+
+<div id="footer">
+  <a href="../contact/index.html"><p id="footText">Contact</p></a>
+</div>
+
+
+
+</body>
+</html>

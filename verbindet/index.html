@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Rachel Smith</title>
+	<link href="../main.css" rel="stylesheet"/>
+
+</head>
+<body>
+
+ <div id="white-box"></div>
+
+
+	<a href="../index.html"><canvas id="mainTitle" width="454" height="50"><img id="Cut_Out_Title" src="../Cut_Out_Title.png"></canvas></a>
+
+<div id ="container10" onmousemove="mainTitle(454,50), colourChanger()">
+
+<div id="textbox" onmousemove="mainTitle(454,50), colourChanger()">
+<p>'Was Verbindet uns?'<br/>with itsnotlikethis collective<br/><br/>April 2017<br/>Foen, Erfurt</p>
+</div>
+
+<img class="images" src="images/image1.jpg"><br/>
+<iframe class="images" src="https://player.vimeo.com/video/167880925" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+<script src = "../sketch.js"></script>
+
+<!call the function(s) in a seperate script tag>
+
+<script>
+var titlewidth = document.getElementById("mainTitle").width;
+var titleheight = document.getElementById("mainTitle").height;
+window.onload = mainTitle(parseInt(titlewidth,10), parseInt(titleheight, 10));
+</script>
+
+</div>
+
+<div id="footer">
+  <a href="../contact/index.html"><p id="footText">Contact</p></a>
+</div>
+
+
+
+</body>
+</html>

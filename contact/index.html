@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Rachel Smith</title>
+	<link href="../main.css" rel="stylesheet"/>
+
+</head>
+<body>
+
+ <div id="white-box"></div>
+
+
+	<a href="../index.html"><canvas id="mainTitle" width="454" height="50"><img id="Cut_Out_Title" src="../Cut_Out_Title.png"></canvas></a>
+
+<div id ="container3" onmousemove="mainTitle(454,50), colourChanger()">
+
+<div id="textbox2" onmousemove="mainTitle(454,50), colourChanger()">
+<p>rachel@itsnotlikethis.de</p>
+</div>
+
+<img src="images/image1.png" class="images">
+
+<script src = "../sketch.js"></script>
+
+<!call the function(s) in a seperate script tag>
+
+<script>
+var titlewidth = document.getElementById("mainTitle").width;
+var titleheight = document.getElementById("mainTitle").height;
+window.onload = mainTitle(parseInt(titlewidth,10), parseInt(titleheight, 10));
+</script>
+
+<script>
+
+function colourChanger(){
+
+  var c = document.getElementById("footer");
+  var d = document.getElementById("textbox2");
+  var colours = ["red", "lime", "blue", "yellow", "fuchsia", "cyan"];
+  var randCol = Math.floor(Math.random()*6);
+  d.style.borderBottomColor = colours[randCol];
+  c.style.borderTopColor = colours[randCol];
+
+ }
+
+ </script>
+
+</div>
+
+<div id="footer">
+  <a href="../contact/index.html"><p id="footText">Contact</p></a>
+</div>
+
+
+
+</body>
+</html>

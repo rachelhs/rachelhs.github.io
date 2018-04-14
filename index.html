@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="main.css" rel="stylesheet"/>
+
+</head>
+<body>
+
+ <div id="white-box"></div>
+
+<a href="index.html"><canvas id="mainTitle" width="454" height="50"><img id="Cut_Out_Title" src="Cut_Out_Title.png"></canvas></a>
+
+
+<div id ="container2" onmousemove="mainTitle(454,50), colourChanger()">
+	<a href="bewegtesland/index.html">
+    <div id ="bewegtesland"><img src="bewegtesland/images/titleimg.png" width=100px height=140px><p id="bltext">Jalousie / Bewegtes Land</p></img></div></a>
+
+   <a href="cat/index.html">
+    <div id ="cat"><img src="cat/images/titleimg.png" width=100px height=100px><p id="cattext">Cat</p></img></div></a>
+
+    <a href="computingwiththread/index.html">
+    <div id ="computingwiththread"><img src="computingwiththread/images/titleimg.png" width=100px height=140px><p id="cwttext">Computing with Thread</p></img></div></a>
+
+    <a href="bots/index.html">
+    <div id ="bots"><img src="bots/images/titleimg.png" width=100px height=140px><p id="botstext">Bots</p></img></div></a>
+
+    <a href="dieechtelustamfalschen/index.html">
+    <div id ="dieechtelustamfalschen"><img src="dieechtelustamfalschen/images/titleimg.png" width=100px height=140px><p id="delamtext">Die Echte Lust am Falschen</p></img></div></a>
+
+    <a href="dontlookatme/dontlookatme2/mainPage/face_camera.html">
+    <div id ="dontlookatme"><img src="dontlookatme/images/titleimg.png" width=100px height=140px><p id="dlamtext">Don't Look at Me</p></img></div></a>
+
+    <a href="partyhorns/index.html">
+    <div id ="partyhorns"><img src="partyhorns/images/titleimg.png" width=100px height=140px></img><p id="phtext">Honk if you love Jesus</p></div></a>
+
+    <a href="slitscanprinter/index.html">
+    <div id ="slitscanprinter"><img src="slitscanprinter/images/titleimg.png" width=100px height=140px><p id="slitscanprintertext">Slitscan Printer</p></img></div></a>
+
+     <a href="toothpaste/index.html">
+    <div id ="toothpaste"><img src="toothpaste/images/titleimg.png" width=100px height=140px><p id="toothpastetext">Order, Disorder and (the anxiety of) Choice</p></img></div></a>
+
+     <a href="verbindet/index.html">
+    <div id ="verbindet"><img src="verbindet/images/titleimg.png" width=100px height=140px><p id="verbindettext">Was verbindet uns?</p></img></div></a>
+
+
+<script src = "sketch.js"></script>
+
+<!call the function(s) in a seperate script tag>
+
+<script>
+var pages = ["bewegtesland", "cat", "computingwiththread", "bots", "dieechtelustamfalschen", "dontlookatme", "partyhorns", "slitscanprinter", "toothpaste", "verbindet"];
+window.onload = startingPos(pages);
+for(var i = 0; i <= pages.length+1; i++){
+window.onload = myMove(pages[i]);
+}
+var titlewidth = document.getElementById("mainTitle").width;
+var titleheight = document.getElementById("mainTitle").height;
+window.onload = mainTitle(parseInt(titlewidth,10), parseInt(titleheight, 10));
+</script>
+</div>
+
+<div id="footer">
+  <a href="contact/index.html"><p id="footText">Contact</p></a>
+</div>
+
+
+</body>
+
+<html>
+

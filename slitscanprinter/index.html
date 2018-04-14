@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Rachel Smith</title>
+	<link href="../main.css" rel="stylesheet"/>
+
+</head>
+<body>
+
+ <div id="white-box"></div>
+
+
+	<a href="../index.html"><canvas id="mainTitle" width="454" height="50"><img id="Cut_Out_Title" src="../Cut_Out_Title.png"></canvas></a>
+
+<div id ="container7" onmousemove="mainTitle(454,50), colourChanger()">
+
+<div id="textbox" onmousemove="mainTitle(454,50), colourChanger()">
+<p>'Slitscan Printer'<br/>September 2016<br/></p>
+</div>
+
+<img class="images" src="images/image1.jpg"><br/>
+<iframe class="images" src="https://player.vimeo.com/video/212615779?autoplay=0&amp;loop=0" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe><br/>
+<img class="images" src="images/image2.jpg"><br/>
+<img class="images" src="images/image3.jpg"><br/>
+<img class="images" src="images/image4.jpg"><br/>
+
+<script src = "../sketch.js"></script>
+
+<!call the function(s) in a seperate script tag>
+
+<script>
+var titlewidth = document.getElementById("mainTitle").width;
+var titleheight = document.getElementById("mainTitle").height;
+window.onload = mainTitle(parseInt(titlewidth,10), parseInt(titleheight, 10));
+</script>
+
+</div>
+
+<div id="footer">
+  <a href="../contact/index.html"><p id="footText">Contact</p></a>
+</div>
+
+
+
+</body>
+</html>
