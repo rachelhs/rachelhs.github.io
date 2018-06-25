@@ -13,3 +13,5 @@ color: azure;
   align-items: center;
   justify-content: center;
 }
+
+.center { margin: 0 auto; width: 400px; }
