@@ -1,57 +1,38 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
+    <script>
+    $(document).ready(function() {
+      //var socket = io.connect('http://141.54.48.84:8080');
+      var socket = io.connect('http://95.90.215.174:8080'); //maud's IP address
+      $('#buttonOn').click(function(e){
+        socket.emit('DISCO');
+        e.preventDefault();
+      });
+
+    });
+  </script>
+    
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/website.css">
+    <link rel="stylesheet" type="text/javascript" href = "js/script.js">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 <style>
-
+    
 </style>
 </head>
-<body>
+<body background="img/confetti.gif">
     
-    	<video controls autoplay loop style="display:block; margin: 0 auto;" width="640" height="360" src="img/giphy.mp4"></video>
+    <div id="demo">
+     <p>
+    Sorry, having technical difficulties! </p>
+     </div>
+    <div id = "extra_text">
+    <p></p></div>
     
-    <p id="demo">
-    TIME UNTIL THE PARTY STARTS</p>
-
-<div id="demo">
-<p>
-    TIME UNTIL THE PARTY STARTS</p>
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jul 14, 2018 17:59:59").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-    // Get todays date and time
-    var now = new Date().getTime();
-    
-    // Find the distance between now an the count down date
-    var distance = countDownDate - now;
-    
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-    // Output the result in an element with id="demo"
-    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-    + minutes + "m " + seconds + "s ";
-    
-    // If the count down is over, write some text 
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("demo").innerHTML = "EXPIRED";
-    }
-}, 1000);
-</script>
-    
-    </div>
-
 </body>
 </html>
